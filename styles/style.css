@@ -623,3 +623,8 @@ video {
 .outline {
   outline-style: solid;
 }
+
+*{
+  scroll-behavior: smooth;
+  font-family: 'Montserrat';
+}
