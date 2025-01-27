@@ -1,24 +1,27 @@
-document.getElementById('mobile-menu-button').addEventListener('click', () => {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-  });
-  
-// Seleciona o botão
-const scrollToTopButton = document.getElementById('scrollToTop');
+console.log("O JavaScript está funcionando!");
 
-// Mostra ou esconde o botão com base na rolagem da página
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 200) {
-    scrollToTopButton.classList.remove('hidden');
-  } else {
-    scrollToTopButton.classList.add('hidden');
+document.addEventListener('DOMContentLoaded', function() {
+  // Obtém o botão de menu e o menu móvel
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  // Verifica se os elementos existem antes de adicionar o evento
+  if (mobileMenuButton && mobileMenu) {
+    // Alterna a visibilidade do menu
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
   }
 });
 
-// Adiciona o evento de clique para rolar ao topo
-scrollToTopButton.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });

@@ -628,3 +628,8 @@ video {
   scroll-behavior: smooth;
   font-family: 'Montserrat';
 }
+
+.swiper-pagination .swiper-pagination-bullet {
+    background-color: #f7be38 !important; /* Laranja do Tailwind */
+}
+
