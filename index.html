@@ -11,7 +11,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/ui"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-  <script src="./scripts/script.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap"
     rel="stylesheet">
@@ -20,49 +20,58 @@
 </head>
 
 <body class="bg-gray-900 text-white">
-  <header class="bg-white rounded-lg shadow dark:bg-gray-900 m-4" id="menu-nav">
+  <header id="menu-nav">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only ">L&R Burguer</span>
-          <img class="h-8 w-auto" src="./assets/Logo.png" alt="">
+          <span class="sr-only">L&R Burguer</span>
+          <img class="h-10 w-auto" src="./assets/Logo.png" alt="L&R Burguer Logo">
         </a>
       </div>
+  
       <div class="flex lg:hidden">
-        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white-700">
+        <button type="button" id="mobile-menu-button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white hover:text-[#F7BE38] focus:outline-none">
           <span class="sr-only">Open main menu</span>
-          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            aria-hidden="true" data-slot="icon">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </button>
       </div>
+  
       <div class="hidden lg:flex lg:gap-x-12">
-
-        <a href="#sobre" class="text-sm/6 font-semibold text-white-900">Sobre nós</a>
-        <a href="#cardapio" class="text-sm/6 font-semibold text-white-900">Cardapio</a>
-        <a href="#pecaja" class="text-sm/6 font-semibold text-whie-900">Peça já</a>
-        <a href="#contato" class="text-sm/6 font-semibold text-white-900">Contato</a>
+        <a href="#sobre" class="text-sm font-semibold text-white-900 hover:text-[#F7BE38]">Sobre nós</a>
+        <a href="#cardapio" class="text-sm font-semibold text-white-900 hover:text-[#F7BE38]">Cardápio</a>
+        <a href="#pecaja" class="text-sm font-semibold text-white-900 hover:text-[#F7BE38]">Peça já</a>
+        <a href="#contato" class="text-sm font-semibold text-white-900 hover:text-[#F7BE38]">Contato</a>
       </div>
-
     </nav>
-    <div id="mobile-menu" class="hidden lg:hidden bg-black text-white">
-      <a href="#sobre" class="block px-4 py-2">Sobre nós</a>
-      <a href="#cardapio" class="block px-4 py-2">Cardápio</a>
-      <a href="#pecaja" class="block px-4 py-2">Peça já</a>
-      <a href="#contato" class="block px-4 py-2">Contato</a>
+  
+    <div id="mobile-menu" class="hidden lg:hidden bg-gray-900 text-white">
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <a href="#sobre" class="block px-4 py-2 text-sm font-semibold text-white-900 hover:text-[#F7BE38]">Sobre nós</a>
+      <a href="#cardapio" class="block px-4 py-2 text-sm font-semibold text-white-900 hover:text-[#F7BE38]">Cardápio</a>
+      <a href="#pecaja" class="block px-4 py-2 text-sm font-semibold text-white-900 hover:text-[#F7BE38]">Peça já</a>
+      <a href="#contato" class="block px-4 py-2 text-sm font-semibold text-white-900 hover:text-[#F7BE38]">Contato</a>
     </div>
   </header>
+  
 
   <main>
     <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-      <img src="./assets/banner.png" alt=""
+      <img src="./assets/banner-2.png" alt=""
         class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
-          <h2 class="text-5xl font-semibold tracking-tight text-black sm:text-7xl">L&R Burguer</h2>
-          <p class="mt-8 text-pretty text-lg font-medium text-white-300 sm:text-xl/8">A melhor hamburgueria de Belo
-            Horizonte e região.</p>
+          <div class="flex items-center">
+            <h2 class="text-5xl font-semibold tracking-tight text-[#F7BE38] sm:text-7xl">L&R</h2>
+            <h2 class="text-5xl font-semibold text-white sm:text-7xl ml-2">Burguer</h2>
+          </div>
+          <div class="flex items-center">
+            <p class="mt-8 text-pretty text-lg font-medium text-white-300 sm:text-xl/8">A melhor</p>
+            <p class="mt-8 text-pretty text-lg font-medium text-[#F7BE38] sm:text-xl/8 ml-1"> hamburgueria </p>
+            <p class="mt-8 text-pretty text-lg font-medium text-white-300 sm:text-xl/8 ml-1">de Belo
+              Horizonte e região.</p>
+          </div>
         </div>
         <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <div
@@ -74,26 +83,6 @@
                 seu pedido!</button>
             </a>
           </div>
-          <!--      
-                <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-                  <div class="flex flex-col-reverse gap-1">
-                    <dt class="text-base/7 text-gray-300">Offices worldwide</dt>
-                    <dd class="text-4xl font-semibold tracking-tight text-white">12</dd>
-                  </div>
-                  <div class="flex flex-col-reverse gap-1">
-                    <dt class="text-base/7 text-gray-300">Full-time colleagues</dt>
-                    <dd class="text-4xl font-semibold tracking-tight text-white">300+</dd>
-                  </div>
-                  <div class="flex flex-col-reverse gap-1">
-                    <dt class="text-base/7 text-gray-300">Hours per week</dt>
-                    <dd class="text-4xl font-semibold tracking-tight text-white">40</dd>
-                  </div>
-                  <div class="flex flex-col-reverse gap-1">
-                    <dt class="text-base/7 text-gray-300">Paid time off</dt>
-                    <dd class="text-4xl font-semibold tracking-tight text-white">Unlimited</dd>
-                  </div>
-                </dl>
-                -->
         </div>
       </div>
     </div>
@@ -104,7 +93,7 @@
           class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div class="lg:pr-8 lg:pt-4">
             <div class="lg:max-w-lg">
-              <h2 class="text-base/7 font-semibold text-orange-600" id="sobre">Conheça a história do</h2>
+              <h2 class="text-base/7 font-semibold text-[#F7BE38]" id="sobre">Conheça a história do</h2>
               <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">L&R Burguer
               </p>
               <p class="mt-6 text-lg/8 text-gray-600">Desde 2022, nossa hamburgueria tem conquistado os paladares da
@@ -129,91 +118,73 @@
 
     <div class="bg-gray-50 py-24 sm:py-32" id="cardapio">
       <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 class="text-center text-base/7 font-semibold text-orange-600">Conheça o nosso cardápio!</h2>
+        <h2 class="text-center text-base font-semibold text-[#F7BE38]">Conheça o nosso cardápio!</h2>
         <p
           class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
-          Hambúrgueres, Massas e Muito Mais!</p>
-        <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-          <div class="relative lg:row-span-2">
-            <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[1rem]"></div>
-            <div
-              class="relative flex flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-              <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Hambúrguer artesanal
+          Hambúrgueres, Massas e Muito Mais!
+        </p>
+        <div class="mt-10">
+          <!-- Swiper -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <!-- Slide -->
+              <div class="swiper-slide flex flex-col items-center">
+                <img class="h-100 w-80 object-cover rounded-lg" src="./assets/hamburguer-artenasal-lrburguer.png"
+                  alt="Hambúrguer artesanal do L&R Burguer" />
+                <p class="mt-4 text-lg font-medium text-gray-950">Hambúrguer artesanal</p>
+                <p class="mt-2 text-sm text-gray-600 text-center">
+                  Carnes suculentas, queijos extravagantes e combinações inusitadas de sabores.
                 </p>
-                <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Carnes suculentas, queijos
-                  extravagantes e combinações inusitadas de sabores se unem para criar verdadeiras explosões de sabor.
+              </div>
+              <div class="swiper-slide flex flex-col items-center">
+                <img class="h-100 w-80 object-cover rounded-lg" src="./assets/cachorro-quente-lr-burguer.png"
+                  alt="Cachorro-quente completo do L&R Burguer" />
+                <p class="mt-4 text-lg font-medium text-gray-950">Cachorro-quente</p>
+                <p class="mt-2 text-sm text-gray-600 text-center">
+                  Salsicha suculenta, molhos irresistíveis e acompanhamentos deliciosos.
                 </p>
               </div>
-              <div
-                class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
-                <div
-                  class="relative inset-x-0 inset-y-10 top-10 overflow-hidden rounded-t-[12cqw] bg-gray-900 shadow-2xl">
-                  <img class="object-cover object-top" src="./assets/hamburguer-artenasal-lrburguer.png"
-                    alt="Hambúrguer artesanal do L&R Burguer">
-                </div>
+              <div class="swiper-slide flex flex-col items-center">
+                <img class="h-100 w-80 object-cover rounded-lg" src="./assets/hamburguer-tradicional-lrburguer.png"
+                  alt="Hambúrguer tradicional do L&R Burguer" />
+                <p class="mt-4 text-lg font-medium text-gray-950">Hambúrguer tradicional</p>
+                <p class="mt-2 text-sm text-gray-600 text-center">
+                  Preparamos hambúrgueres com aquela
+                  pegada autêntica de rua, com ingredientes que conquistam o paladar desde a primeira mordida.
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col items-center">
+                <img class="h-100 w-80 object-cover rounded-lg" src="./assets/macarrao-a-bolonhesa-lr-burguer.png"
+                  alt="Macarrão do L&R Burguer" />
+                <p class="mt-4 text-lg font-medium text-gray-950">Macarrão</p>
+                <p class="mt-2 text-sm text-gray-600 text-center">
+                  Massa no ponto certo, coberta com um
+                  molho bolonhesa de sabor irresistível que vai conquistar o seu paladar.
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col items-center">
+                <img class="h-100 w-80 object-cover rounded-lg" src="./assets/macarrao-a-bolonhesa-lr-burguer.png"
+                  alt="Batata frita do L&R Burguer" />
+                <p class="mt-4 text-lg font-medium text-gray-950">Batata frita</p>
+                <p class="mt-2 text-sm text-gray-600 text-center">
+                  Experimente nossa batata frita crocante e deliciosa, feita com a melhor marca do mercado: McCain
+                  Surecrisp!
+                </p>
+              </div>
+              <div class="swiper-slide flex flex-col items-center">
+                <img class="h-100 w-80 object-cover rounded-lg" src="./assets/macarrao-a-bolonhesa-lr-burguer.png"
+                  alt="Açaí do L&R Burguer" />
+                <p class="mt-4 text-lg font-medium text-gray-950">Açaí</p>
+                <p class="mt-2 text-sm text-gray-600 text-center">
+                  Nosso creme de açaí é leve, refrescante e perfeito para qualquer hora do dia. Combina sabor incrível
+                  com saúde e energia!
+                </p>
               </div>
             </div>
-            <div
-              class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]">
-            </div>
-          </div>
-          <div class="relative max-lg:row-start-1">
-            <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
-            <div
-              class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
-              <div class="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Cachorro-quente</p>
-                <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center"> O clássico que você ama, com
-                  salsicha suculenta, molhos irresistíveis e acompanhamentos que fazem toda a diferença.</p>
-              </div>
-              <div class="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
-                <img class="w-full max-lg:max-w-xs" src="./assets/cachorro-quente-lr-burguer.png"
-                  alt="Cachorro-quente completo com catupiry - L&R Burguer">
-              </div>
-            </div>
-            <div
-              class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]">
-            </div>
-          </div>
-          <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-            <div class="absolute inset-px rounded-lg bg-white"></div>
-            <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
-              <div class="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Macarrão</p>
-                <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Massa no ponto certo, coberta com um
-                  molho bolonhesa de sabor irresistível que vai conquistar o seu paladar.</p>
-              </div>
-              <div class="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
-                <img class="h-[max(200px,40cqw)] object-cover object-center"
-                  src="./assets/macarrao-a-bolonhesa-lr-burguer.png" alt="">
-              </div>
-            </div>
-            <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"></div>
-          </div>
-          <div class="relative lg:row-span-2">
-            <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[1rem]"></div>
-            <div
-              class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
-              <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Hambúrguer
-                  tradicional</p>
-                <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Preparamos hambúrgueres com aquela
-                  pegada autêntica de rua, com ingredientes que conquistam o paladar desde a primeira mordida.</p>
-              </div>
-              <div
-                class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
-                <div
-                  class="relative inset-x-0 inset-y-10 top-10 overflow-hidden rounded-t-[12cqw] bg-gray-900 shadow-2xl">
-                  <img class="size-full object-cover object-top" src="./assets/hamburguer-tradicional-lrburguer.png"
-                    alt="Hambúrguer tradicional do L&R Burguer">
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]">
-            </div>
+            <!-- Navegação -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next text-[#F7BE38]"></div>
+            <div class="swiper-button-prev text-[#F7BE38]"></div>
           </div>
         </div>
         <div class="flex justify-center m-[50px]">
@@ -224,6 +195,7 @@
         </div>
       </div>
     </div>
+
 
     <div class="relative overflow-hidden bg-white" id="pecaja">
       <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
@@ -315,7 +287,8 @@
     <a href="#menu-nav">
       <!--text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 me-5 mb-5-->
 
-      <button class="fixed bottom-5 right-5 bg-[#F7BE38]-500 text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 px-4 py-2 rounded-lg shadow-lg">
+      <button
+        class="fixed bottom-5 right-5 bg-[#F7BE38]-500 text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 px-4 py-2 rounded-lg shadow-lg">
         Topo
       </button>
     </a>
@@ -356,7 +329,8 @@
     </div>
   </footer>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="./scripts/script.js"></script>
 </body>
 
 </html>
