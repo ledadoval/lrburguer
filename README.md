@@ -14,7 +14,7 @@ Welcome to **L&R Burger**, a simple and modern landing page created for a for a 
 
 - **HTML**: Structuring the content of the page.
 - **CSS**: Styling and layout, including responsiveness.
-- **JavaScript**: Adding interactivity (e.g., navigation menu toggle, form validation).
+- **JavaScript**: Adding interactivity.
 
 ## 🚀 How to Run
 
