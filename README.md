@@ -2,7 +2,7 @@
 
 Welcome to **L&R Burger**, a simple and modern landing page created for a for a burger restaurant in Belo Horizonte, Brazil. This project showcases the restaurant's menu, location, and contact information, using **HTML**, **CSS**, and **JavaScript**.
 
-## 🌟 Features
+## Features
 
 - **Responsive Design**: Optimized for desktop and mobile devices.
 - **Menu Section**: Displays popular burgers and prices.
@@ -10,13 +10,13 @@ Welcome to **L&R Burger**, a simple and modern landing page created for a for a 
 - **Contact Form**: Allows customers to send inquiries directly from the page.
 - **Location Map**: Integrated map showing the restaurant's location in Belo Horizonte.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML**: Structuring the content of the page.
 - **CSS**: Styling and layout, including responsiveness.
 - **JavaScript**: Adding interactivity.
 
-## 🚀 How to Run
+## How to Run
 
 ### Option 1: Run Locally
 
